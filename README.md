@@ -1,41 +1,42 @@
-Athena: Your Autonomous News Fetcher 🚀
-Welcome to Athena, a sleek and powerful tool to automate news curation for your newsletters! Powered by the NewsData.io API, Athena fetches the latest articles on topics like business, tech, sports, and more, saving them to a JSON file for easy integration into your newsletter pipeline. Whether you're building a newsletter empire or just exploring news automation, Athena is your go-to solution. Let’s get started! 🎉
-Features
+🎉 Athena: The Ultimate News Fetching Beast! 🚀
+ 
 
-Customizable Topics: Fetch news for any of NewsData.io’s categories (e.g., business, politics, technology).
-Flexible Output: Save articles to a customizable JSON file with append mode to avoid duplicates.
-Open-Source Ready: MIT-licensed, with a simple setup for developers and non-coders alike.
-Command-Line Support: Run quick topic fetches via CLI (e.g., node athena.js --topics business,sports).
-Lightweight: Built with Node.js, requiring minimal dependencies (axios, dotenv).
+Welcome to Athena, your autonomous news-fetching powerhouse! 🌟 Powered by the NewsData.io API, this sleek tool grabs the latest articles on topics like business, tech, or sports, saving them in a dazzling JSON file for your newsletter empire. Ready to automate like a pro? Let’s dive in! 💥
 
-Prerequisites
+🌠 Why Athena Rocks?
 
-Node.js (v16 or later): Download here.
-NewsData.io API Key: Sign up for a free account at newsdata.io to get your API key (free tier: 200 requests/day).
-A text editor (e.g., VS Code) and terminal (e.g., PowerShell, Terminal).
+🔧 Customizable Topics: Pick from 17 epic categories (e.g., business, sports, tech)!
+💾 Flexible Output: Save to any JSON file with append magic to avoid duplicates.
+🌐 Open-Source Vibes: MIT-licensed, free for all to remix and rule!
+⌨️ CLI Power: Quick topic switches with node athena.js --topics sports,tech.
+⚡ Lightweight: Runs on Node.js with just axios and dotenv.
 
-Installation
 
-Clone the Repository:
-git clone https://github.com/yourusername/athena.git
+🎨 Get Started: Your Mission Begins
+🛠️ Prerequisites
+
+Node.js (v16+): Grab it here! ✅
+NewsData.io API Key: Snag a free one at newsdata.io (200 reqs/day). 🔑
+A text editor (VS Code rocks!) and terminal (PowerShell or Terminal).
+
+🚀 Installation
+
+Clone the Repo:git clone https://github.com/BernardoRaposo/athena-news-fetcher
 cd athena
 
 
-Install Dependencies:
-npm install
+Install the Goods:npm install
 
 
-Set Up Environment:
-
-Create a .env file in the athena folder.
-Add your NewsData.io API key:NEWS_DATA_IO_API_KEY=your_api_key_here
+Set Up Your Secret Weapon:
+Create a .env file in athena.
+Drop your API key:NEWS_DATA_IO_API_KEY=your_api_key_here
 
 
 
 
-Configure Topics:
-
-Open config.json and set your desired topics (choose from: business, crime, domestic, education, entertainment, environment, food, health, lifestyle, politics, science, sports, technology, top, tourism, world, other). Example:{
+Customize Your Quest:
+Edit config.json with your topics (e.g., ["business", "sports"]):{
   "topics": ["business", "sports"],
   "outputFile": "news.json",
   "append": true
@@ -45,22 +46,25 @@ Open config.json and set your desired topics (choose from: business, crime, dome
 
 
 
-Usage
-Run Athena to fetch news and save it to your specified output file:
+
+⚡ Unleash Athena!
+🎮 Run the Magic
+Fire up Athena to fetch news:
 npm start
 
-This reads config.json, fetches up to 10 articles per topic, and saves them to news.json (or your custom file).
-Command-Line Option:Fetch specific topics directly via CLI:
+Watch it grab up to 10 articles per topic and save to news.json (or your custom file)!
+💻 CLI Superpower
+Switch topics on the fly:
 node athena.js --topics business,technology
 
-This overrides config.json topics for a one-time fetch.
-Output Example (news.json):
+Boom—instant news for your chosen categories!
+🌟 Sample Output (news.json)
 {
   "business": [
     {
-      "title": "Stock Market Surges",
+      "title": "Stock Market Soars! 🌟",
       "link": "https://example.com/article",
-      "summary": "Markets hit record highs...",
+      "summary": "Markets hit new highs...",
       "published": "2025-07-14T12:00:00Z",
       "source": "reuters",
       "image": null,
@@ -71,27 +75,48 @@ Output Example (news.json):
   "technology": [...]
 }
 
-Customization
 
-Change Topics: Edit config.json or use the --topics CLI flag.
-Output File: Set outputFile in config.json (e.g., "custom_news.json").
-Append Mode: Set "append": true in config.json to add new articles without overwriting.
+🎨 Customize Your Empire
 
-Troubleshooting
+🔄 Change Topics: Tweak config.json or use --topics CLI flag.
+📁 Output File: Set outputFile in config.json (e.g., "epic_news.json").
+➕ Append Mode: Enable "append": true to stack articles over time.
 
-Invalid API Key: Ensure your NEWS_DATA_IO_API_KEY in .env is correct.
-No Articles Fetched: Check topic names in config.json or CLI (must match NewsData.io categories).
-File Not Saved: Verify write permissions in the athena folder.
-Rate Limit Exceeded: Free tier allows 200 requests/day. Reduce topic count or wait 24 hours.
 
-Contributing
-Want to make Athena even better? Check out our CONTRIBUTING.md for guidelines on submitting issues, pull requests, or new features!
-License
-Athena is open-source under the MIT License. Use it, modify it, share it—build something awesome!
-What's Next?
-Athena is the first step in an autonomous newsletter system. Stay tuned for:
+🛡️ Troubleshooting Tips
 
-Stage 2: A dashboard to curate articles into a "feed" object.
-Stage 3: A minimalist newsletter builder for automated emails.
 
-Got questions or ideas? Open an issue on GitHub or tweet us at @yourusername. Let’s build a newsletter empire together! 🌟
+
+Issue
+Fix
+
+
+
+Invalid API Key
+Check .env and your NewsData.io key.
+
+
+No Articles
+Verify topics match allowed categories.
+
+
+File Not Saved
+Ensure write permissions in athena.
+
+
+Rate Limit Hit
+Wait 24h (200 reqs/day free tier).
+
+
+
+🤝 Join the Athena Revolution!
+Want to level up Athena? Check our CONTRIBUTING.md to report bugs, suggest features, or submit code. Open an issue or PR—we’re building this empire together! 💪
+📜 License
+Athena is yours under the MIT License. Remix it, share it, conquer with it! 🌍
+🌅 What’s Next?
+Athena v1 is just the start! Look out for:
+
+Stage 2: A dazzling dashboard to curate your "feed" object.
+Stage 3: A newsletter builder to automate emails.
+
+Got ideas? Hit us up on GitHub Issues or tweet @sir__fox. Let’s rule the newsletter world! 🌠

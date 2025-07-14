@@ -19,7 +19,7 @@ Example: "Add support for RSS feeds to supplement NewsData.io."
 
 3. Submitting Code
 
-Fork the Repository:git clone https://github.com/yourusername/athena.git
+Fork the Repository:git clone https://github.com/BernardoRaposo/athena-news-fetcher
 cd athena
 
 
