@@ -1,0 +1,5 @@
+{
+  "topics": ["business"],
+  "outputFile": "test2.json",
+  "append": true
+}

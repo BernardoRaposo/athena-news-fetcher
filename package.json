@@ -1,0 +1,22 @@
+{
+  "name": "athena",
+  "version": "1.0.0",
+  "description": "A news fetcher for autonomous newsletters using NewsData.io API",
+  "main": "athena.js",
+  "scripts": {
+    "start": "node athena.js"
+  },
+  "keywords": [
+    "news",
+    "newsletter",
+    "api",
+    "automation"
+  ],
+  "author": "[Your Name]",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "yargs": "^17.7.2"
+  }
+}
