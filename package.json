@@ -12,7 +12,7 @@
     "api",
     "automation"
   ],
-  "author": "[Your Name]",
+  "author": "Bernardo Raposo",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.2",

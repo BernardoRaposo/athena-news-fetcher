@@ -25,12 +25,17 @@ const argv = yargs
 async function loadConfig() {
   try {
     const configPath = path.join(__dirname, 'config.json');
+    console.log('Config path:', configPath); // Debug log
     const configData = await fs.readFile(configPath, 'utf8');
+    console.log('Raw config data:', configData); // Debug log
     const config = JSON.parse(configData);
 
-    // Validate topics (from config or CLI)
-    const topics = argv.topics.length > 0 ? argv.topics : config.topics;
-    if (!topics || !Array.isArray(topics) || topics.length === 0) {
+    // Ensure topics is an array from config or CLI
+    let topics = config.topics || [];
+    if (argv.topics && argv.topics.length > 0) {
+      topics = argv.topics;
+    }
+    if (!Array.isArray(topics) || topics.length === 0) {
       throw new Error('Config or CLI must provide a non-empty "topics" array');
     }
     topics.forEach(topic => {
